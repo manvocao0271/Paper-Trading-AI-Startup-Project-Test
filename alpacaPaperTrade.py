@@ -36,8 +36,8 @@ logger = logging.getLogger(__name__)
 @dataclass
 class AlpacaConfig:
     """Alpaca API configuration"""
-    api_key: str = "PK5L45ZIHMPAMO8AJ82P"
-    api_secret: str = "7pp6qdjAydo8KnYCBnJOSehNFBgmPzi7u3g6eHDX"
+    api_key: str = os.environ.get('ALPACA_API_KEY', '')
+    api_secret: str = os.environ.get('ALPACA_API_SECRET', '')
     base_url: str = "https://paper-api.alpaca.markets"  # Paper trading URL
     data_url: str = "https://data.alpaca.markets"
     websocket_url: str = "wss://stream.data.alpaca.markets/v2/iex"
