@@ -21,6 +21,10 @@ from rich.live import Live
 from rich import box
 import keyboard
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env (if present)
+load_dotenv()
 
 # Setup logging to file to keep console clean
 logging.basicConfig(
@@ -51,7 +55,7 @@ class MockDataFeed:
     
     def __init__(self, symbols: List[str]):
         self.symbols = symbols
-        self.current_prices = {}
+        self.current_prices = {}    
         self.price_history = {}
         self.trade_history = {}
         self.callbacks = []

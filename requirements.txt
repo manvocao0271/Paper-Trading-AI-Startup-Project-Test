@@ -1,0 +1,7 @@
+numpy
+pandas
+requests
+websockets
+rich
+keyboard
+python-dotenv
